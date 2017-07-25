@@ -1,0 +1,46 @@
+/* Mobile & Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #scene {
+    transform: translateY(40%) !important; } }
+
+@media only screen and (min-width: 100px) and (max-width: 1024px) {
+  .goToVideo {
+    display: none; }
+  #scene {
+    transform: translateY(30%) !important; } }
+
+/* Mobile */
+@media only screen and (min-width: 100px) and (max-width: 760px) {
+  .introText {
+    font-size: 20px; }
+  .creditCard img {
+    width: 80%; }
+  .manBlue img {
+    width: 100%; }
+  #scene {
+    display: none; }
+  h1 {
+    font-size: 28px; }
+  .videoContainer {
+    margin-top: 100px; }
+  .firstScreen {
+    height: auto !important; }
+  .videoContainer .videoPopup .fa-close {
+    top: -40px;
+    right: 0px; }
+  .contentWord .bigWord {
+    font-size: 24px; }
+  .contentWord p {
+    font-size: 18px; }
+  .quotePopup .quoteModal {
+    font-size: 14px; }
+  .footerHolder h3 {
+    margin-bottom: 25px; }
+  .blackPattern {
+    background-color: rgba(0, 0, 0, 0.9); } }
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .introText {
+    transform: translateY(-50%) translateX(-23%);
+    left: 30%; } }
