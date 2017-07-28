@@ -5,465 +5,19 @@
 }
 
 @font-face {
-    font-family: "GothamBook";
-    src: url("../fonts/GothamBook.eot");
-    src: url("../fonts/GothamBook.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamBook.woff") format("woff"), url("../fonts/GothamBook.ttf") format("truetype"), url("../fonts/GothamBook.svg#GothamBook") format("svg");
+    font-family: 'TofinoRegular';
+    src: url('../fonts/TofinoRegular.eot');
+    src: url('../fonts/TofinoRegular.eot') format('embedded-opentype'), url('../fonts/TofinoRegular.woff2') format('woff2'), url('../fonts/TofinoRegular.woff') format('woff'), url('../fonts/TofinoRegular.ttf') format('truetype'), url('../fonts/TofinoRegular.svg#TofinoRegular') format('svg');
 }
 
-.fontTofinoUltra {
-    font-family: 'TofinoUltra';
-}
-
-.fontGothamBook {
-    font-family: "GothamBook";
-}
-
-.transitionAll {
-    transition: all linear 200ms;
-    -webkit-transition: all linear 200ms;
-    -moz-transition: all linear 200ms;
-}
-
-$blueColor:#3071ac;
-body {
-    background-image: url(../images/bg.jpg);
-    background-repeat: repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    &.fixedOverflow {
-        overflow: hidden;
-    }
-}
-
-.pinkColor {
-    color: #d63359 !important;
-}
-
-.preloader {
-    position: fixed;
-    z-index: 111111;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #103049;
-    background-image: url('../images/bg-preloader.jpg');
-}
-
-#scene {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    .layer {
-        position: relative !important;
-        height: 100%;
-        img {
-            z-index: 12;
-            width: 110%;
-            position: absolute;
-            top: 0;
-            margin-left: -5%;
-        }
-    }
-}
-
-.introAnim {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.introText {
-    color: #fff;
-    @extend.fontTofinoUltra;
-    font-size: 45px;
-    z-index: 12;
-    text-transform: uppercase;
-    position: absolute;
-    transform: translateY(-50%) translateX(-50%);
-    top: 50%;
-    left: 50%;
-    line-height: 110%;
-    div {
-        opacity: 1;
-        top: 100%;
-        transform: translateY(0);
-        position: relative;
-    }
-    .author {
-        font-size: 20px;
-        text-align: right;
-        @extend.fontGothamBook;
-        line-height: 130%;
-        margin-top: 20px;
-        span {
-            @extend.fontTofinoUltra;
-        }
-    }
-    .smallText {
-        font-size: 22px;
-        @extend.fontGothamBook;
-        text-transform: none
-    }
-    .halfText {
-        margin-bottom: 20px;
-        line-height: 130%;
-        width: 45%;
-        display: inline-block;
-    }
-}
-
-.goToVideo {
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: block;
-    text-align: center;
-    margin: auto;
-    z-index: 12;
-    text-transform: uppercase;
-    @extend.fontGothamBook;
-    color: #fff;
-    bottom: 40px;
-    opacity: 0;
-    visibility: hidden;
-    &::after {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: 150%;
-        content: '';
-        background-color: #fff;
-        width: 1px;
-        height: 150px;
-    }
-}
-
-.skipIntro {
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: block;
-    text-align: center;
-    margin: auto;
-    z-index: 12;
-    text-transform: uppercase;
-    @extend.fontGothamBook;
-    color: #fff;
-    bottom: 20px;
-}
-
-a {
-    &:focus {
-        outline: none;
-    }
-    &:hover {
-        color: $blueColor;
-        text-decoration: none;
-    }
-}
-
-.blackPattern {
-    background-color: rgba(0, 0, 0, 0.65);
-    position: absolute;
-    top: 0;
-    z-index: 4;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.logo {
-    z-index: 12;
-    position: absolute;
-    top: 20px;
-    opacity: 0;
-    left: 20px;
-}
-
-.firstScreen {
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    left: 0;
-}
-
-h1 {
-    margin-top: 240px;
-    color: #fff;
-    @extend.fontTofinoUltra;
-    font-size: 55px;
-    line-height: 120%;
-    opacity: 0;
-    text-transform: uppercase;
-    span {
-        color: $blueColor;
-    }
-}
-
-.videoContainer {
-    text-align: center;
-    margin-top: 200px;
-    a {
-        display: block;
-        background-color: #000;
-    }
-    img {
-        width: 100%;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-        @extend.transitionAll;
-    }
-    &:hover {
-        img {
-            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
-            opacity: 0.8;
-        }
-    }
-    .centerText {
-        color: #fff;
-        @extend.fontTofinoUltra;
-        text-transform: uppercase;
-        font-size: 1.2em;
-        letter-spacing: 2px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        margin: auto;
-        display: block;
-    }
-    .container {
-        position: relative;
-    }
-    .videoPopup {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: none;
-        iframe {
-            height: 100%;
-            width: 100%;
-        }
-        .fa-close {
-            position: absolute;
-            color: #fff;
-            position: absolute;
-            top: -0px;
-            right: -40px;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            background: #000;
-            cursor: pointer;
-            &:hover {
-                color: #000;
-                background: #fff;
-            }
-        }
-    }
-}
-
-.contentWord {
-    position: relative;
-    padding-bottom: 200px;
-    p {
-        color: #fff;
-        font-size: 30px;
-        line-height: 120%;
-        margin-bottom: 10px;
-    }
-    .bigWord {
-        @extend.fontTofinoUltra;
-        text-transform: uppercase;
-        font-size: 48px;
-    }
-    .smallWord {
-        font-size: 20px;
-    }
-}
-
-.textAlignRight {
-    text-align: right;
-}
-
-.manBlue {
-    position: absolute;
-    right: 0;
-    opacity: 0.3;
-    top: 0;
-}
-
-.creditCard {
-    bottom: 0px;
-    position: absolute;
-}
-
-.spaceHundred {
-    height: 100px;
-}
-
-.quoteHolder {
-    position: relative;
-    padding: 100px 0 200px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    .quote {
-        position: relative;
-        margin-bottom: 200px;
-        p {
-            color: #fff;
-            @extend.fontTofinoUltra;
-            font-size: 26px;
-        }
-        span.quoteIcon {
-            font-size: 100px;
-            top: -40px;
-            left: -80px;
-            color: #fff;
-            @extend.fontTofinoUltra;
-            position: absolute;
-            &.last {
-                top: inherit;
-                bottom: 20px;
-                left: inherit;
-                right: -20px;
-            }
-        }
-        .author {
-            text-align: right;
-            margin-top: 80px;
-            color: #fff;
-            @extend.fontTofinoUltra;
-            span {
-                @extend.fontGothamBook;
-            }
-        }
-    }
-}
-
-.fullWidthImage {
-    img {
-        width: 100%;
-    }
-}
-
-.socialHolder {
-    padding-bottom: 50px;
-    background-color: #f8f8f8;
-    h2 {
-        text-align: center;
-        color: #3071ac;
-        @extend.fontTofinoUltra;
-        font-size: 26px;
-        padding: 100px 0 50px;
-    }
-}
-
-.juicer-feed {
-    h1 {
-        display: none !important;
-    }
-}
-
-.footerHolder {
-    background-image: url('../images/bg-footer.jpg');
-    background-repeat: no-repeat;
-    background-position: top center;
-    padding: 100px 0;
-    height: 360px;
-    h3 {
-        color: #fff;
-        @extend.fontTofinoUltra;
-        font-size: 26px;
-        text-transform: uppercase;
-        margin-bottom: 70px;
-    }
-}
-
-.btn {
-    a {
-        color: #fff;
-        text-transform: uppercase;
-        padding-right: 60px;
-        position: relative;
-        font-size: 16px;
-        direction: block;
-        @extend.fontTofinoUltra;
-        &::after {
-            width: 40px;
-            height: 3px;
-            content: '';
-            background-color: #fff;
-            position: absolute;
-            right: 0;
-            top: 10px;
-            @extend.transitionAll;
-        }
-        &:hover {
-            &::after {
-                right: -10px;
-            }
-        }
-    }
-}
-
-.quotePopup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1211;
-    height: 100%;
-    display: none;
-    &.shown {
-        display: block;
-    }
-    .quoteOverlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        opacity: 0;
-    }
-    .quoteModal {
-        position: absolute;
-        z-index: 12;
-        width: 0px;
-        height: 100%;
-        right: 0;
-        padding: 100px 0px;
-        overflow: hidden;
-        top: 0;
-        background: #edeef0 url('../images/bg-overlay.jpg') no-repeat center center;
-        background-size: cover;
-        color: #3071ac;
-        font-size: 19px;
-        p {
-            opacity: 0;
-        }
-        span {
-            font-weight: bold;
-        }
-    }
+@font-face {
+    font-family: 'TofinoBlack';
+    src: url('../fonts/TofinoBlack.eot');
+    src: url('../fonts/TofinoBlack.eot') format('embedded-opentype'), url('../fonts/TofinoBlack.woff2') format('woff2'), url('../fonts/TofinoBlack.woff') format('woff'), url('../fonts/TofinoBlack.ttf') format('truetype'), url('../fonts/TofinoBlack.svg#TofinoBlack') format('svg');
 }
 
 
-/******************** PRELOADER **********************/
+/******************* PRELOADER **********************/
 
 .sk-cube-grid {
     width: 40px;
@@ -552,4 +106,346 @@ h1 {
         -webkit-transform: scale3D(0, 0, 1);
         transform: scale3D(0, 0, 1);
     }
+}
+
+.preloader {
+    position: fixed;
+    z-index: 111111;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #103049;
+    background-image: url('../images/bg-preloader.jpg');
+}
+
+.fontTofinoUltra {
+    font-family: 'TofinoUltra';
+}
+
+.fontTofinoRegular {
+    font-family: 'TofinoRegular';
+}
+
+.fontTofinoBlack {
+    font-family: 'TofinoBlack';
+}
+
+.transitionAll {
+    transition: all linear 200ms;
+    -webkit-transition: all linear 200ms;
+    -moz-transition: all linear 200ms;
+}
+
+$blueColor:#3071AC;
+$pinkColor: #D63359;
+$darkBlueColor:#0F2C46;
+a {
+    &:focus,
+    &:active {
+        outline: none;
+        text-decoration: none;
+    }
+    &:hover {
+        color: $blueColor;
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    font-size: 18px;
+}
+
+.textShadow {
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.45);
+}
+
+.zindexHigh {
+    z-index: 1000;
+    position: relative;
+}
+
+#scene {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    .layer {
+        position: relative !important;
+        height: 100%;
+        img {
+            z-index: 12;
+            width: 110%;
+            position: absolute;
+            top: 0;
+            margin-left: -5%;
+        }
+    }
+}
+
+.clearBoth {
+    clear: both;
+}
+
+.btn {
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        padding-right: 60px;
+        position: relative;
+        font-size: 16px;
+        direction: block;
+        @extend.fontTofinoUltra;
+        &::after {
+            width: 40px;
+            height: 3px;
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            @extend.transitionAll;
+        }
+        &:hover {
+            &::after {
+                right: -10px;
+            }
+        }
+    }
+}
+
+.header {
+    margin: 80px 0;
+    .logo {
+        display: inline-block;
+    }
+    nav {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: right;
+        width: calc(100% - 285px);
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            a {
+                @extend.fontTofinoRegular;
+                color: #fff;
+                font-size: 1em;
+                display: block;
+                line-height: 100%;
+                padding: 8px;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.35);
+                }
+            }
+        }
+    }
+}
+
+.search {
+    display: inline-block;
+    .fa-search {
+        color: #fff;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+}
+
+.searchPopup {
+    display: none;
+}
+
+.firstScreen {
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    .container {
+        text-align: center;
+    }
+    h1 {
+        color: #fff;
+        font-size: 1em;
+        margin-top: 50px;
+        span {
+            @extend.fontTofinoUltra;
+            @extend.textShadow;
+            color: $blueColor;
+            font-size: 5.5em;
+        }
+    }
+    h2 {
+        @extend.fontTofinoUltra;
+        color: #fff;
+        @extend.textShadow;
+        font-size: 5.5em;
+    }
+    p {
+        color: #fff;
+        font-size: 1em;
+        margin-top: 50px;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+.toNextSection {
+    position: absolute;
+    bottom: 80px;
+    z-index: 12;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    &::before {
+        position: absolute;
+        height: 30px;
+        bottom: -55px;
+        left: 50%;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        content: '';
+        width: 30px;
+    }
+    &::after {
+        position: absolute;
+        height: 100px;
+        bottom: -140px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        content: '';
+        width: 1px;
+        background-color: #fff;
+    }
+}
+
+.timelineHolder {
+    position: relative;
+    z-index: 12;
+    margin-top: -150px;
+    .timelineDate {
+        text-align: center;
+        font-size: 1em;
+        @extend.fontTofinoRegular;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .timelineList {
+        position: relative;
+        clear: both;
+        &::after {
+            position: absolute;
+            height: 120%;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            content: '';
+            width: 1px;
+            background-color: #fff;
+        }
+        .timlineItem {
+            position: relative;
+            clear: both;
+            .timelineInfos {
+                width: 50%;
+                float: right;
+                padding-left: 80px;
+                text-align: left;
+                h3 {
+                    font-size: 4em;
+                    color: #fff;
+                    @extend.textShadow;
+                    @extend.fontTofinoUltra;
+                }
+                p {
+                    font-size: 1em;
+                    color: #fff;
+                    @extend.fontTofinoRegular;
+                }
+            }
+            .timelineImage {
+                width: 50%;
+                float: left;
+                padding-right: 40px;
+                position: relative;
+                &::before {
+                    height: 10px;
+                    width: 10px;
+                    background-color: #fff;
+                    content: '';
+                    position: absolute;
+                    left: inherit;
+                    top: 46px;
+                    right: -30px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                }
+                &::after {
+                    height: 3px;
+                    width: 124px;
+                    background-color: #fff;
+                    content: '';
+                    position: absolute;
+                    left: inherit;
+                    top: 50px;
+                    right: -30px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            &:nth-child(2n) {
+                .timelineInfos {
+                    float: left;
+                    text-align: right;
+                    padding-right: 80px;
+                    padding-left: 0px;
+                }
+                .timelineImage {
+                    float: right;
+                    padding-left: 40px;
+                    padding-right: 0px;
+                    &::after {
+                        left: -30px;
+                    }
+                    &::before {
+                        left: -30px;
+                    }
+                }
+            }
+        }
+    }
+    .facts {
+        text-align: center;
+        color: #fff;
+        width: 100%;
+    }
+}
+
+.cardHolder {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    .js-tilt {}
 }
