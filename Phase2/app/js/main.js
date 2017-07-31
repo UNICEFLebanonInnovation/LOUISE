@@ -4,7 +4,8 @@ $(window).load(function() {
     //DETECT SMALL SCREENS
     if ($(window).width() < 768) {} else {
         skrollr.init({
-            smoothScrolling: true
+            smoothScrolling: true,
+            forceHeight: false
         });
     }
     //FULL HEIGHT FIRST SCREEN FUNCTION CALL
@@ -21,7 +22,14 @@ $(window).resize(function() {
     firstScreenFull();
 });
 $(document).ready(function() {
-    $('.js-tilt').tilt({});
+    $('.tiltEffect').tilt({
+        maxTilt: 3,
+    });
+    $('.cardTilt').tilt({
+        reset: false,
+        maxTilt: 30,
+        perspective: 500, // Transform perspective, the lower the more extreme the tilt gets.
+    });
 });
 //FULL HEIGHT FIRST SCREEN FUNCTION
 function firstScreenFull() {
