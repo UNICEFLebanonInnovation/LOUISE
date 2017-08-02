@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/juicer.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <!-- endbuild -->
@@ -46,6 +47,7 @@
     <script src="js/TweenMax.min.js" type="text/javascript"></script>
     <script src="js/skrollr.js" type="text/javascript"></script>
     <script src="js/parallax.js" type="text/javascript"></script>
+    <script src="js/swiper.min.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
     <!-- endbuild -->
 </head>
@@ -121,18 +123,18 @@
     <!-- HEADER END -->
 
     <!-- FIRST SCREEN START -->
-    <div class="firstScreen hideForSearch">
-        <div class="container" data-0="transform: translateY(0px); opacity:1;" data-600="transform: translateY(50px); opacity:0;">
+    <div class="firstScreen ">
+        <div class="container hideForSearch" data-0="transform: translateY(0px); opacity:1;" data-600="transform: translateY(50px); opacity:0;">
             <h1>Launched in December 2016, LOUISE is a<br><span>humanitarian</span></h1>
         </div>
         <div id="scene" data-0="top:0%;" data-1000="top:100%;">
             <div class="layer" data-depth="0.02"><img src="images/layer1.png"></div>
         </div>
-        <div class="container zindexHigh" data-0-top="opacity:0;" data-bottom="opacity:1;">
+        <div class="container zindexHigh hideForSearch" data-0-top="opacity:0;" data-bottom="opacity:1;">
             <h2>safety net</h2>
             <p>where socio-economically disadvantaged Syrian refugees and Lebanese can seek assistance, based on their vulnerabilities.</p>
         </div>
-        <div class="toNextSection exploreBtn" data-300-top="opacity:0;" data-bottom="opacity:1;">Explore</div>
+        <div class="toNextSection exploreBtn hideForSearch" data-300-top="opacity:0;" data-bottom="opacity:1;">Explore</div>
     </div>
     <!-- FIRST SCREEN END -->
 
@@ -182,9 +184,9 @@
             <div class="facts">
                 <div class="factShape">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 887.3 317.4" style="enable-background:new 0 0 887.3 317.4;" xml:space="preserve">
-                        <path data-50-top="stroke-dashoffset:6000;" data-end="stroke-dashoffset:0;" class="st0" d="M10,317.4c0,0,26.1-288.1,433.7-288.1s433.7,288.1,433.7,288.1"/>
-                        <path data-50-top="stroke-dashoffset:6000;" data-end="stroke-dashoffset:0;" class="st0" d="M300.5,317.4c0,0,8.7-288.1,144.9-288.1s144.9,288.1,144.9,288.1"/>
-                        <path data-50-top="stroke-dashoffset:6000;" data-end="stroke-dashoffset:0;" class="st0" d="M423.7,29.3c0,0,1.2-18.5,20-18.5s20,18.5,20,18.5"/>
+                        <path data-150-top="stroke-dashoffset:6000;" data-end="stroke-dashoffset:0;" class="st0" d="M10,317.4c0,0,26.1-288.1,433.7-288.1s433.7,288.1,433.7,288.1"/>
+                        <path data-150-top="stroke-dashoffset:6000;" data-end="stroke-dashoffset:0;" class="st0" d="M300.5,317.4c0,0,8.7-288.1,144.9-288.1s144.9,288.1,144.9,288.1"/>
+                        <path data-150-top="stroke-dashoffset:6000;" data-end="stroke-dashoffset:0;" class="st0" d="M423.7,29.3c0,0,1.2-18.5,20-18.5s20,18.5,20,18.5"/>
                     </svg>
                 </div>
                 <span class="factsTitle">What LOUISE<br>does for<br>a refugee ?</span>
@@ -222,7 +224,7 @@
     <!-- TIMELINE END -->
 
     <!-- WHITE SECTION START -->
-    <div class="whiteSection">
+    <div class="whiteSection hideForSearch">
         <div class="container">
             <div class="row">
                 <div class="col-md-2">&nbsp;</div>
@@ -243,7 +245,7 @@
     <!-- WHITE SECTION END -->
 
     <!-- CARD START -->
-    <div class="cardHolder" data-top-bottom="background-position: 50% -300px;" data-bottom-top="background-position: 50% 300px;">
+    <div class="cardHolder hideForSearch" data-top-bottom="background-position: 50% -300px;" data-bottom-top="background-position: 50% 300px;">
         <div class="container">
             <div class="leftTitle">WORK STREAMS</div>
             <div class="rightTitle">SYSTEM</div>
@@ -308,17 +310,118 @@
     <!-- CARD END -->
 
     <!-- LATEST NEWS START -->
-    <div class="latestNewsSection">
+    <div class="latestNewsSection hideForSearch">
         <h2>Latest News</h2>
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <div class="itemContainer tiltEffect">
+                        <div class="itemImage">
+                            <img src="images/news1.jpg" alt="">
+                            <a href="javascript:;" class="itemTitle">Bryce Canyon A Stunning Us</a>
+                        </div>
+                        <div class="itemBottom">
+                            <div class="itemLeft">05/06/2017</div>
+                            <div class="itemLink">
+                                <a href="javascript:;">Read more <span class="linkAnim"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="itemContainer tiltEffect">
+                        <div class="itemImage">
+                            <img src="images/news2.jpg" alt="">
+                            <a href="javascript:;" class="itemTitle">Bryce Canyon A Stunning Us</a>
+                        </div>
+                        <div class="itemBottom">
+                            <div class="itemLeft">05/06/2017</div>
+                            <div class="itemLink">
+                                <a href="javascript:;">Read more <span class="linkAnim"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="itemContainer tiltEffect">
+                        <div class="itemImage">
+                            <img src="images/news3.jpg" alt="">
+                            <a href="javascript:;" class="itemTitle">Bryce Canyon A Stunning Us</a>
+                        </div>
+                        <div class="itemBottom">
+                            <div class="itemLeft">05/06/2017</div>
+                            <div class="itemLink">
+                                <a href="javascript:;">Read more <span class="linkAnim"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="itemContainer tiltEffect">
+                        <div class="itemImage">
+                            <img src="images/news4.jpg" alt="">
+                            <a href="javascript:;" class="itemTitle">Bryce Canyon A Stunning Us</a>
+                        </div>
+                        <div class="itemBottom">
+                            <div class="itemLeft">05/06/2017</div>
+                            <div class="itemLink">
+                                <a href="javascript:;">Read more <span class="linkAnim"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="itemContainer tiltEffect">
+                        <div class="itemImage">
+                            <img src="images/news5.jpg" alt="">
+                            <a href="javascript:;" class="itemTitle">Bryce Canyon A Stunning Us</a>
+                        </div>
+                        <div class="itemBottom">
+                            <div class="itemLeft">05/06/2017</div>
+                            <div class="itemLink">
+                                <a href="javascript:;">Read more <span class="linkAnim"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="itemContainer tiltEffect">
+                        <div class="itemImage">
+                            <img src="images/news6.jpg" alt="">
+                            <a href="javascript:;" class="itemTitle">Bryce Canyon A Stunning Us</a>
+                        </div>
+                        <div class="itemBottom">
+                            <div class="itemLeft">05/06/2017</div>
+                            <div class="itemLink">
+                                <a href="javascript:;">Read more <span class="linkAnim"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- LATEST NEWS END -->
 
     <!-- FOOTER START -->
-    <div class="footer">
+    <div class="footer hideForSearch">
         <div class="footerLogo"><img src="images/footer-logo.png" alt=""></div>
         <div class="credit"> © 2017, UNHCR – All rights reserved</div>
     </div>
     <!-- FOOTER END -->
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            paginationClickable: true,
+            spaceBetween: 30
+        });
+    </script>
 </body>
 
 </html>

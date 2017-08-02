@@ -23,13 +23,40 @@ $(window).resize(function() {
 });
 $(document).ready(function() {
     $('.tiltEffect').tilt({
-        maxTilt: 3,
+        maxTilt: 4,
     });
     $('.cardTilt').tilt({
         reset: false,
         maxTilt: 30,
         perspective: 500, // Transform perspective, the lower the more extreme the tilt gets.
     });
+
+    $('.cardBtn').click(function() {
+        $('html,body').animate({ scrollTop: $(".cardHolder").offset().top }, 1000);
+    });
+    $('.exploreBtn').click(function() {
+        $('html,body').animate({ scrollTop: $(".timelineHolder").offset().top - 100 }, 1000);
+    });
+    $('.fa-search').click(function() {
+        $('body').toggleClass('fixedScroll');
+        $('.hideForSearch').fadeToggle();
+        $('.searchPopup').fadeToggle();
+        setTimeout(function() {
+
+        }, 300);
+
+    });
+
+    $('.qaButton a').click(function() {
+        $(this).parent().parent().parent().find($('.qaExpandableArea')).slideToggle();
+        $(this).toggleClass('opened');
+        if ($(this).hasClass('opened')) {
+            $(this).html('Collapse <span class="linkAnim"></span>')
+        } else {
+            $(this).html('Expand <span class="linkAnim"></span>')
+        }
+    });
+
 });
 //FULL HEIGHT FIRST SCREEN FUNCTION
 function firstScreenFull() {
