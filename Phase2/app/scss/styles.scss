@@ -1482,6 +1482,24 @@
                     }
                 }
             }
+            .swiper-button-prev {
+                width: 22px;
+                height: 22px;
+                background: url(../images/up-arrow.png) no-repeat 0 0 / 100% auto;
+                right: 0;
+                left: inherit;
+                margin-bottom: 30px;
+                transform: translateY(-50%);
+            }
+            .swiper-button-next {
+                right: 0;
+                left: inherit;
+                margin-top: 30px;
+                width: 22px;
+                height: 22px;
+                background: url(../images/down-arrow.png) no-repeat 0 0 / 100% auto;
+                transform: translateY(-50%);
+            }
         }
         .aboutBottomContent {
             width: 45%;
