@@ -1,2 +1,4 @@
 /Phase2/node_modules
 .idea
+
+.vscode/settings.json
