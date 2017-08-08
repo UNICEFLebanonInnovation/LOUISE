@@ -1,13 +1,8 @@
 $(window).load(function() {
     //PREALODER INIT
     $('.preloader').fadeOut();
-    //DETECT SMALL SCREENS
-    if ($(window).width() < 768) {} else {
-        skrollr.init({
-            smoothScrolling: true,
-            forceHeight: false
-        });
-    }
+    //Skroll init
+    skrollrInit();
     //FULL HEIGHT FIRST SCREEN FUNCTION CALL
     firstScreenFull();
     //PARALLAX FIRST SCREEN OM MOUSE WHEEL FUNCTION
@@ -20,8 +15,13 @@ $(window).load(function() {
 $(window).resize(function() {
     //FULL HEIGHT FIRST SCREEN FUNCTION CALL
     firstScreenFull();
+    //Skroll init
+    skrollrInit();
 });
 $(document).ready(function() {
+    $('.burgerMenu').click(function() {
+        $('nav').slideToggle();
+    });
     $('.tiltEffect').tilt({
         maxTilt: 4,
     });
@@ -30,23 +30,12 @@ $(document).ready(function() {
         maxTilt: 30,
         perspective: 500, // Transform perspective, the lower the more extreme the tilt gets.
     });
-
     $('.cardBtn').click(function() {
         $('html,body').animate({ scrollTop: $(".cardHolder").offset().top }, 1000);
     });
     $('.exploreBtn').click(function() {
         $('html,body').animate({ scrollTop: $(".timelineHolder").offset().top - 100 }, 1000);
     });
-    $('.fa-search').click(function() {
-        $('body').toggleClass('fixedScroll');
-        $('.hideForSearch').fadeToggle();
-        $('.searchPopup').fadeToggle();
-        setTimeout(function() {
-
-        }, 300);
-
-    });
-
     $('.qaButton a').click(function() {
         $(this).parent().parent().parent().find($('.qaExpandableArea')).slideToggle();
         $(this).toggleClass('opened');
@@ -58,6 +47,29 @@ $(document).ready(function() {
     });
 
 });
+
+//SCKROLLR INIT 
+function skrollrInit() {
+    if ($(window).width() < 1025) {
+        skrollr.init().destroy();
+        $('.fa-search').click(function() {
+            $('.searchPopup').fadeToggle();
+        });
+    } else {
+        skrollr.init({
+            smoothScrolling: true,
+            forceHeight: false
+        });
+        $('.fa-search').click(function() {
+            $('body').toggleClass('fixedScroll');
+            $('.hideForSearch').fadeToggle();
+            $('.searchPopup').fadeToggle();
+            setTimeout(function() {
+
+            }, 300);
+        });
+    }
+}
 //FULL HEIGHT FIRST SCREEN FUNCTION
 function firstScreenFull() {
     var windowHeight = $(window).height();

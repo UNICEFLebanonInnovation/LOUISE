@@ -95,28 +95,35 @@
     <!-- HEADER START -->
     <div class="header">
         <div class="container">
-            <div class="logo"><img src="images/logo.png" alt="Louise"></div>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Louise"></a>
+            </div>
             <nav>
                 <ul>
                     <li>
-                        <a href="javascript:;">About</a>
+                        <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="javascript:;" class="active">Q&A</a>
+                        <a href="qa.html" class="active">Q&A</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Resources</a>
+                        <a href="ressources.html">Resources</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Press Room</a>
+                        <a href="press.html">Press Room</a>
                     </li>
                     <li>
-                        <a href="javascript:;">In The News</a>
+                        <a href="news.html">In The News</a>
                     </li>
                 </ul>
             </nav>
             <div class="search">
                 <span class="fa fa-search"></span>
+            </div>
+            <div class="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </div>
@@ -125,8 +132,8 @@
     <!-- INSIDE PAGES START -->
     <div class="insidePagesContent">
         <div class="topImage" data-top-bottom="transform:translateY(30%);" data-bottom-top="transform:translateY(-20%);">&nbsp;</div>
-        <h1>Q&A</h1>
-        <div class="container">
+        <h1 class="hideForSearch">Q&A</h1>
+        <div class="container hideForSearch">
             <div class="insideSearch">
                 <input type="text" class="inputSearch" placeholder="Have something specific ? Type it here">
                 <input type="submit" value="SEARCH" class="submitSearch">

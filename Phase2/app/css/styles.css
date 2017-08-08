@@ -6,12 +6,12 @@
 @font-face {
   font-family: 'TofinoRegular';
   src: url("../fonts/TofinoRegular.eot");
-  src: url("../fonts/TofinoRegular.eot") format("embedded-opentype"), url("../fonts/TofinoRegular.woff2") format("woff2"), url("../fonts/TofinoRegular.woff") format("woff"), url("../fonts/TofinoRegular.ttf") format("truetype"), url("../fonts/TofinoRegular.svg#TofinoRegular") format("svg"); }
+  src: url("../fonts/TofinoRegular.eot") format("embedded-opentype"), url("../fonts/TofinoRegular.woff") format("woff"), url("../fonts/TofinoRegular.ttf") format("truetype"), url("../fonts/TofinoRegular.svg#TofinoRegular") format("svg"); }
 
 @font-face {
   font-family: 'TofinoBlack';
   src: url("../fonts/TofinoBlack.eot");
-  src: url("../fonts/TofinoBlack.eot") format("embedded-opentype"), url("../fonts/TofinoBlack.woff2") format("woff2"), url("../fonts/TofinoBlack.woff") format("woff"), url("../fonts/TofinoBlack.ttf") format("truetype"), url("../fonts/TofinoBlack.svg#TofinoBlack") format("svg"); }
+  src: url("../fonts/TofinoBlack.eot") format("embedded-opentype"), url("../fonts/TofinoBlack.woff") format("woff"), url("../fonts/TofinoBlack.ttf") format("truetype"), url("../fonts/TofinoBlack.svg#TofinoBlack") format("svg"); }
 
 /******************* PRELOADER **********************/
 .sk-cube-grid {
@@ -505,15 +505,15 @@ body {
   .cardHolder .rightTitle {
     color: #E04C6C;
     position: absolute;
-    top: 50px;
+    top: -50px;
     font-size: 1.1em;
     text-transform: uppercase;
     left: 50%;
     transform: translateX(-50%); }
   .cardHolder .leftTitle {
-    left: 40%; }
+    left: 20%; }
   .cardHolder .rightTitle {
-    left: 60%; }
+    left: 80%; }
   .cardHolder::before {
     content: '';
     position: absolute;
@@ -597,22 +597,22 @@ body {
         left: -6px; }
       .cardHolder .circle-container li:hover .cardInfos {
         display: block; }
-      .cardHolder .circle-container li.alignRight {
-        right: 50%;
-        left: inherit !important;
-        padding-left: 0px;
-        padding-right: 40px;
-        text-align: right; }
-        .cardHolder .circle-container li.alignRight::after {
-          right: 0 !important;
-          left: inherit !important; }
-        .cardHolder .circle-container li.alignRight::before {
-          right: -3px !important;
-          left: inherit !important; }
-        .cardHolder .circle-container li.alignRight:hover::before {
-          top: 1px;
-          right: -8px !important;
-          left: inherit !important; }
+    .cardHolder .circle-container ul.alignLeft li {
+      right: 50%;
+      left: inherit;
+      padding-left: 0px;
+      padding-right: 40px;
+      text-align: right; }
+      .cardHolder .circle-container ul.alignLeft li::after {
+        right: 0;
+        left: inherit; }
+      .cardHolder .circle-container ul.alignLeft li::before {
+        right: -3px;
+        left: inherit; }
+      .cardHolder .circle-container ul.alignLeft li:hover::before {
+        top: 1px;
+        right: -8px;
+        left: inherit; }
     .cardHolder .circle-container .cardTilt {
       width: 100%;
       height: 100%; }
@@ -852,6 +852,7 @@ body {
   background-image: url(../images/bg-top.jpg);
   background-size: 100% auto;
   position: absolute;
+  background-repeat: no-repeat;
   top: 0;
   left: 0;
   width: 100%;
@@ -1182,3 +1183,6 @@ body {
     text-shadow: 0 8px 14px rgba(0, 0, 0, 0.35);
     text-align: center;
     color: #fff; }
+
+.burgerMenu {
+  display: none; }

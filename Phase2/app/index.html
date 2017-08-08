@@ -41,6 +41,7 @@
     <!-- endbuild -->
 
     <!--build:js js/main.min.js -->
+
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/tilt.jquery.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
@@ -95,28 +96,35 @@
     <!-- HEADER START -->
     <div class="header">
         <div class="container">
-            <div class="logo"><img src="images/logo.png" alt="Louise"></div>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Louise"></a>
+            </div>
             <nav>
                 <ul>
                     <li>
-                        <a href="javascript:;">About</a>
+                        <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Q&A</a>
+                        <a href="qa.html">Q&A</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Resources</a>
+                        <a href="ressources.html">Resources</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Press Room</a>
+                        <a href="press.html">Press Room</a>
                     </li>
                     <li>
-                        <a href="javascript:;">In The News</a>
+                        <a href="news.html">In The News</a>
                     </li>
                 </ul>
             </nav>
             <div class="search">
                 <span class="fa fa-search"></span>
+            </div>
+            <div class="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </div>
@@ -128,7 +136,7 @@
             <h1>Launched in December 2016, LOUISE is a<br><span>humanitarian</span></h1>
         </div>
         <div id="scene" data-0="top:0%;" data-1000="top:100%;">
-            <div class="layer" data-depth="0.02"><img src="images/layer1.png"></div>
+            <div class="layer" data-depth="0.02"><img src="images/layer1.png" alt="parallax image intro"></div>
         </div>
         <div class="container zindexHigh hideForSearch" data-0-top="opacity:0;" data-bottom="opacity:1;">
             <h2>safety net</h2>
@@ -183,6 +191,7 @@
             <div class="clearBoth"></div>
             <div class="facts">
                 <div class="factShape">
+
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 887.3 317.4" style="enable-background:new 0 0 887.3 317.4;" xml:space="preserve">
                         <path data-150-top="stroke-dashoffset:6000;" data-end="stroke-dashoffset:0;" class="st0" d="M10,317.4c0,0,26.1-288.1,433.7-288.1s433.7,288.1,433.7,288.1"/>
                         <path data-150-top="stroke-dashoffset:6000;" data-end="stroke-dashoffset:0;" class="st0" d="M300.5,317.4c0,0,8.7-288.1,144.9-288.1s144.9,288.1,144.9,288.1"/>
@@ -191,22 +200,22 @@
                 </div>
                 <span class="factsTitle">What LOUISE<br>does for<br>a refugee ?</span>
                 <div class="row">
-                    <div class="col-md-3" data-450-top="opacity:0;" data-top="opacity:1;">
+                    <div class="col-md-3 col-sm-6" data-450-top="opacity:0;" data-top="opacity:1;">
                         <div class="factIcon"><img src="images/food.png" alt=""></div>
                         <div class="factPrice">USD 27</div>
                         <div class="factDesc">Food Assistance</div>
                     </div>
-                    <div class="col-md-3" data-400-top="opacity:0;" data-top="opacity:1;">
+                    <div class="col-md-3 col-sm-6" data-400-top="opacity:0;" data-top="opacity:1;">
                         <div class="factIcon"><img src="images/baby-face.png" alt=""></div>
                         <div class="factPrice">USD 20-65</div>
                         <div class="factDesc">Child benefit</div>
                     </div>
-                    <div class="col-md-3" data-350-top="opacity:0;" data-top="opacity:1;">
+                    <div class="col-md-3 col-sm-6" data-350-top="opacity:0;" data-top="opacity:1;">
                         <div class="factIcon"><img src="images/ice.png" alt=""></div>
                         <div class="factPrice">USD 100-147</div>
                         <div class="factDesc">Winter assistance support</div>
                     </div>
-                    <div class="col-md-3" data-300-top="opacity:0;" data-top="opacity:1;">
+                    <div class="col-md-3 col-sm-6" data-300-top="opacity:0;" data-top="opacity:1;">
                         <div class="factIcon"><img src="images/t-shirt.png" alt=""></div>
                         <div class="factPrice">USD 175</div>
                         <div class="factDesc">Multi-purpose cash</div>
@@ -247,15 +256,36 @@
     <!-- CARD START -->
     <div class="cardHolder hideForSearch" data-top-bottom="background-position: 50% -300px;" data-bottom-top="background-position: 50% 300px;">
         <div class="container">
-            <div class="leftTitle">WORK STREAMS</div>
-            <div class="rightTitle">SYSTEM</div>
             <div class='circle-container'>
+                <div class="leftTitle">WORK STREAMS</div>
+                <ul class="alignLeft">
+                    <li class='deg210 '>
+                        <div class="cardTitle">Communication</div>
+                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
+                    </li>
+                    <li class='deg240'>
+                        <div class="cardTitle">Targeting</div>
+                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
+                    </li>
+                    <li class='deg270'>
+                        <div class="cardTitle">Distribution</div>
+                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
+                    </li>
+                    <li class='deg300'>
+                        <div class="cardTitle">Training</div>
+                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
+                    </li>
+                    <li class='deg330'>
+                        <div class="cardTitle">Monitoring and evaluation</div>
+                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
+                    </li>
+                </ul>
+                <div class="rightTitle">SYSTEM</div>
                 <ul>
                     <li class='deg30'>
                         <div class="cardTitle">Common Card Governing body</div>
                         <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
                     </li>
-
                     <li class='deg60'>
                         <div class="cardTitle">Common Card Steering Committee</div>
                         <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
@@ -276,29 +306,10 @@
                         <div class="cardTitle">Call Centre</div>
                         <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
                     </li>
-                    <li class='deg210 alignRight'>
-                        <div class="cardTitle">Communication</div>
-                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
-                    </li>
-                    <li class='deg240 alignRight'>
-                        <div class="cardTitle">Targeting</div>
-                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
-                    </li>
-                    <li class='deg270 alignRight'>
-                        <div class="cardTitle">Distribution</div>
-                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
-                    </li>
-                    <li class='deg300 alignRight'>
-                        <div class="cardTitle">Training</div>
-                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
-                    </li>
-                    <li class='deg330 alignRight'>
-                        <div class="cardTitle">Monitoring and evaluation</div>
-                        <div class="cardInfos">Describes the contributions and duties of all participating organizations</div>
-                    </li>
                 </ul>
+                <div class="clearBoth"></div>
                 <div class="cardTilt">
-                    <img src="images/Card.png">
+                    <img src="images/Card.png" alt="louise credit card image">
                 </div>
             </div>
 

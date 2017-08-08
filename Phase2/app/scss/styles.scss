@@ -7,13 +7,13 @@
     @font-face {
         font-family: 'TofinoRegular';
         src: url('../fonts/TofinoRegular.eot');
-        src: url('../fonts/TofinoRegular.eot') format('embedded-opentype'), url('../fonts/TofinoRegular.woff2') format('woff2'), url('../fonts/TofinoRegular.woff') format('woff'), url('../fonts/TofinoRegular.ttf') format('truetype'), url('../fonts/TofinoRegular.svg#TofinoRegular') format('svg');
+        src: url('../fonts/TofinoRegular.eot') format('embedded-opentype'), url('../fonts/TofinoRegular.woff') format('woff'), url('../fonts/TofinoRegular.ttf') format('truetype'), url('../fonts/TofinoRegular.svg#TofinoRegular') format('svg');
     }
     
     @font-face {
         font-family: 'TofinoBlack';
         src: url('../fonts/TofinoBlack.eot');
-        src: url('../fonts/TofinoBlack.eot') format('embedded-opentype'), url('../fonts/TofinoBlack.woff2') format('woff2'), url('../fonts/TofinoBlack.woff') format('woff'), url('../fonts/TofinoBlack.ttf') format('truetype'), url('../fonts/TofinoBlack.svg#TofinoBlack') format('svg');
+        src: url('../fonts/TofinoBlack.eot') format('embedded-opentype'), url('../fonts/TofinoBlack.woff') format('woff'), url('../fonts/TofinoBlack.ttf') format('truetype'), url('../fonts/TofinoBlack.svg#TofinoBlack') format('svg');
     }
     /******************* PRELOADER **********************/
     
@@ -639,17 +639,17 @@
         .rightTitle {
             color: $pinkColor;
             position: absolute;
-            top: 50px;
+            top: -50px;
             font-size: 1.1em;
             text-transform: uppercase;
             left: 50%;
             transform: translateX(-50%);
         }
         .leftTitle {
-            left: 40%;
+            left: 20%;
         }
         .rightTitle {
-            left: 60%;
+            left: 80%;
         }
         &::before {
             content: '';
@@ -752,25 +752,29 @@
                         display: block;
                     }
                 }
-                &.alignRight {
-                    right: 50%;
-                    left: inherit !important;
-                    padding-left: 0px;
-                    padding-right: 40px;
-                    text-align: right;
-                    &::after {
-                        right: 0 !important;
-                        left: inherit !important;
-                    }
-                    &::before {
-                        right: -3px !important;
-                        left: inherit !important;
-                    }
-                    &:hover {
+            }
+            ul {
+                &.alignLeft {
+                    li {
+                        right: 50%;
+                        left: inherit;
+                        padding-left: 0px;
+                        padding-right: 40px;
+                        text-align: right;
+                        &::after {
+                            right: 0;
+                            left: inherit;
+                        }
                         &::before {
-                            top: 1px;
-                            right: -8px !important;
-                            left: inherit !important;
+                            right: -3px;
+                            left: inherit;
+                        }
+                        &:hover {
+                            &::before {
+                                top: 1px;
+                                right: -8px;
+                                left: inherit;
+                            }
                         }
                     }
                 }
@@ -1087,6 +1091,7 @@
         background-image: url(../images/bg-top.jpg);
         background-size: 100% auto;
         position: absolute;
+        background-repeat: no-repeat;
         top: 0;
         left: 0;
         width: 100%;
@@ -1510,4 +1515,8 @@
             color: #fff;
             @extend.fontTofinoRegular;
         }
+    }
+    
+    .burgerMenu {
+        display: none;
     }
