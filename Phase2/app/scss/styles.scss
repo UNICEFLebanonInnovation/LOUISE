@@ -283,6 +283,7 @@
         }
         &.pink {
             a {
+                box-shadow: 0 4px 11px 0 rgba(224, 76, 108, 0.5);
                 background-color: $pinkColor;
                 color: #fff;
             }
@@ -317,9 +318,23 @@
                     display: block;
                     line-height: 100%;
                     padding: 8px;
+                    position: relative;
+                    @extend.transitionAll;
+                    &::before {
+                        @extend.transitionAll;
+                        width: 0;
+                        background-color: rgba(0, 0, 0, 0.35);
+                        content: '';
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
                     &:hover,
                     &.active {
-                        background-color: rgba(0, 0, 0, 0.35);
+                        &::before {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -641,6 +656,8 @@
             position: absolute;
             top: -50px;
             font-size: 1.1em;
+            @extend.fontTofinoRegular;
+            letter-spacing: 8px;
             text-transform: uppercase;
             left: 50%;
             transform: translateX(-50%);
@@ -703,7 +720,8 @@
                 }
                 .cardInfos {
                     @extend.transitionAll;
-                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
                     @extend.fontTofinoRegular;
                     font-size: 0.8em;
                 }
@@ -749,7 +767,8 @@
                         left: -6px;
                     }
                     .cardInfos {
-                        display: block;
+                        opacity: 1;
+                        visibility: visible;
                     }
                 }
             }
@@ -1222,6 +1241,10 @@
                     a {
                         display: inline-block;
                         margin: 0 3px;
+                        @extend.transitionAll;
+                        &:hover {
+                            opacity: 0.8;
+                        }
                     }
                     .fa {
                         font-size: 2em;
@@ -1281,10 +1304,10 @@
         }
         .introAboutScroll {
             position: absolute;
-            top: 350px;
+            top: 250px;
             left: 50%;
             transform: translateX(-50%);
-            height: 40%;
+            height: 50%;
             overflow: hidden;
             color: rgba(255, 255, 255, 0.7);
         }
@@ -1353,8 +1376,8 @@
                 border: 1px solid #fff;
                 opacity: 0.5;
             }
-            height: 600px;
-            padding-bottom:200px;
+            height: 500px;
+            padding-bottom:100px;
             .swiper-container {
                 width: 100%;
                 height: 100%;
@@ -1509,7 +1532,7 @@
         .aboutBottomContent {
             width: 45%;
             margin: 0 auto;
-            padding: 100px 0;
+            padding: 50px 0 100px;
             text-shadow: 0 8px 14px rgba(0, 0, 0, 0.35);
             text-align: center;
             color: #fff;
@@ -1519,4 +1542,29 @@
     
     .burgerMenu {
         display: none;
+    }
+    
+    .moreNews {
+        text-align: center;
+        a {
+            span.fa {
+                display: inline-block;
+                width: 120px;
+                height: 120px;
+                line-height: 120px;
+                margin-bottom: 10px;
+                background-color: #fff;
+                border-radius: 50%;
+                font-size: 1.5em;
+                -webkit-border-radius: 50%;
+                color: #777;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            }
+            color:#fff;
+            font-size: 0.8em;
+            letter-spacing: 4px;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }

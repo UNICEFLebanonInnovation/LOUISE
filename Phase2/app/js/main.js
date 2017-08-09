@@ -47,6 +47,8 @@ $(document).ready(function() {
         }
     });
     $('.fa-search').click(function() {
+        $('body').toggleClass('fixedScroll');
+        $('.hideForSearch').fadeToggle();
         $('.searchPopup').fadeToggle();
     });
 });
@@ -64,11 +66,7 @@ function skrollrInit() {
             smoothScrolling: true,
             forceHeight: false
         });
-        $('.fa-search').click(function() {
-            $('body').toggleClass('fixedScroll');
-            $('.hideForSearch').fadeToggle();
 
-        });
     }
 }
 //FULL HEIGHT FIRST SCREEN FUNCTION
