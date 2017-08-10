@@ -152,8 +152,19 @@
 
     <!-- TIMELINE START -->
     <div class="timelineHolder hideForSearch">
-
         <div class="container ">
+            <div class="videoContainer">
+                <div class="container">
+                    <a href="javascript:playVideo();" class="playVideo" data-video="https://www.youtube.com/embed/Oj4UzNtkW6I?rel=0&autoplay=1">
+                        <img src="images/video.jpg" alt="">
+                        <span class="centerText">Play</span>
+                    </a>
+                    <div class="videoPopup">
+                        <span class="fa fa-close"></span>
+                        <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
             <div class="timelineList">
                 <div class="timelineDate">May 2017</div>
                 <div class="timlineItem" data-top="transform:translateY(400px); opacity:0;" data--300-top="transform:translateY(0px); opacity:1;">
@@ -324,6 +335,35 @@
     </div>
     <!-- CARD END -->
 
+    <!-- QUOTE HOLDER START -->
+    <div class="quoteHolder" style="background-image:url(images/quote-bg.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">&nbsp;</div>
+                <div class="col-md-6">
+                    <div class="quote">
+                        <span class="quoteIcon">”</span>
+                        <p>
+                            What is great about LOUISE is that it empowers refugees to choose the assistance they need the most based on their families’ own needs. The LOUISE system is an innovative joint effort by the main cash agencies to put all their knowledge and assets at
+                            the service of the people with the greatest needs. Because aid is never sufficient to cover all needs, we are constantly trying to do better - in the most cost-efficient way – in order to reach the maximum number of people.
+
+
+                        </p>
+                        <div class="author">
+                            <span>Mireille Girard</span><br>UNHCR Representative in Lebanon
+                        </div>
+                        <span class="quoteIcon last">”</span>
+                    </div>
+                    <div class="btn white absoluteRight tiltEffect">
+                        <a href="javascript:;">* What's in a name? <span class="linkAnim"></span></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- QUOTE HOLDER END -->
+
     <!-- LATEST NEWS START -->
     <div class="latestNewsSection hideForSearch">
         <h2>Latest News</h2>
@@ -427,6 +467,18 @@
     </div>
     <!-- LATEST NEWS END -->
 
+    <!-- SOCIAL FEEDS START -->
+    <div class="socialHolder">
+        <div class="container">
+            <h2>Social LOUISE</h2>
+
+            <ul class="juicer-feed" data-feed-id="facebook-57acb89b-c8df-4fc0-9cea-42292eb782b4">
+
+            </ul>
+        </div>
+    </div>
+    <!-- SOCIAL FEEDS END -->
+
     <!-- FOOTER START -->
     <div class="footer hideForSearch">
         <div class="footerLogo"><img src="images/footer-logo.png" alt=""></div>
@@ -434,15 +486,132 @@
     </div>
     <!-- FOOTER END -->
 
+    <script>
+        $(window).load(function() {
+            //TIMELINE ANIMATION FOR FIRST SCREEN
+            var tl = new TimelineLite();
+
+            var tl = new TimelineLite();
+            tl.to($('.firstScreen .exploreBtn'), 0.1, {
+                opacity: 0,
+            }, "-=4.5");
+            tl.to($('html, body'), 0.1, {
+                css: {
+                    overflow: 'hidden'
+                },
+            }, "-=4.5");
+            tl.to($('.firstScreen h1'), 0.1, {
+                opacity: 0,
+            }, "-=4.5");
+            tl.to($('.firstScreen h2'), 0.1, {
+                opacity: 0,
+            }, "-=4.5");
+            tl.to($('.firstScreen p'), 0.1, {
+                opacity: 0,
+            }, "-=4.5");
+            tl.to('#scene', 1, {
+                y: 300
+            }, "-=1.8");
+            tl.staggerFrom($('.introText1 div'), 1.5, {
+                ease: Expo.easeOut,
+                opacity: 0,
+                y: "400%"
+            }, 0.1);
+            tl.staggerTo($('.introText1 div'), 1.5, {
+                ease: Expo.easeOut,
+                opacity: 0,
+                y: "-500%",
+                delay: 4
+            }, 0.1);
+            tl.staggerFrom($('.introText2 div'), 1.5, {
+                ease: Expo.easeOut,
+                opacity: 0,
+                y: "400%"
+            }, 0.1, "-=1");
+            tl.staggerTo($('.introText2 div'), 1.5, {
+                ease: Expo.easeOut,
+                opacity: 0,
+                y: "-400%",
+                delay: 4
+            }, 0.1);
+            tl.staggerFrom($('.introText3 div'), 1.5, {
+                ease: Expo.easeOut,
+                opacity: 0,
+                y: "500%"
+            }, 0.1, "-=1");
+            tl.staggerTo($('.introText3 div'), 1.5, {
+                ease: Expo.easeOut,
+                opacity: 0,
+                y: "-400%",
+                delay: 4
+            }, 0.1);
+            tl.to($('.blackPattern'), 1.5, {
+                opacity: 0
+            }, "-=0.3");
+            tl.to('#scene', 1, {
+                y: 300
+            }, "-=1.8");
+            tl.to('body', 1, {
+                className: "-=fixedOverflow"
+            }, "-=2.8");
+            tl.to($('.blackPattern'), 1.5, {
+                autoAlpha: 0
+            }, "-=0.3");
+            tl.to('.logo', 1, {
+                opacity: 1
+            }, "-=3.8");
+            tl.to('.introAnim', 0.1, {
+                autoAlpha: 0
+            }, "-=2.8");
+            tl.to('.firstScreen h1', 1, {
+                opacity: 1
+            }, "-=2.8");
+            tl.to('.firstScreen h2', 1, {
+                opacity: 1
+            }, "-=2.8");
+            tl.to('.firstScreen p', 1, {
+                opacity: 1
+            }, "-=2.8");
+            tl.to('.firstScreen .exploreBtn', 1, {
+                opacity: 1
+            }, "-=2.8");
+            tl.to($('html, body'), 0.1, {
+                css: {
+                    overflow: 'auto'
+                },
+            }, "-=4.5");
+            tl.add("endIntro", 23);
+            tl.to($('.skipIntro'), 1.5, {
+                ease: Expo.easeOut,
+                opacity: 0
+            }, "-=5");
+            tl.to($('.skipIntro'), 1.5, {
+                autoAlpha: 0
+            }, "-=6");
+            tl.to($('.goToVideo'), 1.5, {
+                autoAlpha: 1
+            }, "-=7");
+            tl.to($('.goToVideo'), 1.5, {
+                ease: Expo.easeOut,
+                opacity: 1
+            }, "-=8");
+            $('.skipIntro').click(function() {
+                tl.play("endIntro");
+
+            });
+        })
+    </script>
     <!-- Initialize Swiper -->
     <script>
+        $(window).on('beforeunload', function() {
+            $(window).scrollTop(0);
+        });
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             slidesPerView: 'auto',
             centeredSlides: true,
             paginationClickable: true,
             spaceBetween: 30
-
         });
     </script>
 </body>
