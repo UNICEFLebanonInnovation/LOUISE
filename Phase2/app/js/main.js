@@ -8,9 +8,11 @@ $(window).load(function() {
     //PARALLAX FIRST SCREEN OM MOUSE WHEEL FUNCTION
     $('#scene').parallax();
 
-    //TIMELINE ANIMATION FOR FIRST SCREEN
-    var tl = new TimelineLite();
-    tl.to('#scene', 1, { y: 300 }, "-=1.8");
+
+    $('.videoPopup .fa-close').click(function() {
+        $('.videoPopup').fadeOut();
+        $('.videoPopup iframe').attr('src', '');
+    });
 });
 $(window).resize(function() {
     //FULL HEIGHT FIRST SCREEN FUNCTION CALL
@@ -74,3 +76,9 @@ function firstScreenFull() {
     var windowHeight = $(window).height();
     $('.firstScreen').height(windowHeight);
 }
+
+function playVideo() {
+    var frameSrc = $('.playVideo').attr('data-video');
+    $('.videoPopup').fadeIn();
+    $('.videoPopup iframe').attr('src', frameSrc);
+};

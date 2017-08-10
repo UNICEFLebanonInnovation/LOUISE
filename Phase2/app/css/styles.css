@@ -96,11 +96,141 @@
   background-color: #103049;
   background-image: url("../images/bg-preloader.jpg"); }
 
-.fontTofinoUltra, .firstScreen h1 span, .firstScreen h2, .timelineHolder .timelineList .timlineItem .timelineInfos h3, .timelineHolder .facts .factPrice, .cardHolder .circle-container li .cardTitle, .searchPopup input, .insideSearch .submitSearch, .insidePagesContent h1, .qaListing .qaItem .qaContent .qaTitle, .aboutIntro h2, .refugeeBenefits .refugeeSlider .refugeeInfos .refugeePrice, .refugeeBenefits .refugeeSlider .refugeeInfos .refugeeTitle {
+.introAnim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 111114; }
+
+.introText {
+  color: #fff;
+  font-size: 45px;
+  z-index: 12;
+  text-transform: uppercase;
+  position: fixed;
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  line-height: 110%; }
+  .introText div {
+    opacity: 1;
+    top: 100%;
+    transform: translateY(0);
+    position: relative; }
+  .introText .author {
+    font-size: 20px;
+    text-align: right;
+    line-height: 130%;
+    margin-top: 20px; }
+  .introText .smallText {
+    font-size: 22px;
+    text-transform: none; }
+  .introText .halfText {
+    margin-bottom: 20px;
+    line-height: 130%;
+    width: 45%;
+    display: inline-block; }
+
+.skipIntro {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+  margin: auto;
+  z-index: 1111111;
+  text-transform: uppercase;
+  color: #fff;
+  bottom: 20px; }
+
+.blackPattern {
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 111114; }
+
+.videoContainer {
+  text-align: center;
+  position: relative;
+  padding-bottom: 200px; }
+  .videoContainer a {
+    display: block;
+    background-color: #000; }
+  .videoContainer img {
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); }
+  .videoContainer:hover img {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+    opacity: 0.8; }
+  .videoContainer .centerText {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: auto;
+    display: block; }
+  .videoContainer .container {
+    position: relative; }
+  .videoContainer .videoPopup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: none; }
+    .videoContainer .videoPopup iframe {
+      height: 100%;
+      width: 100%; }
+    .videoContainer .videoPopup .fa-close {
+      position: absolute;
+      color: #fff;
+      position: absolute;
+      top: -0px;
+      right: -40px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background: #000;
+      cursor: pointer; }
+      .videoContainer .videoPopup .fa-close:hover {
+        color: #000;
+        background: #fff; }
+  .videoContainer::after {
+    position: absolute;
+    height: 170px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    content: '';
+    width: 1px;
+    background-color: #fff; }
+
+.socialHolder {
+  padding-bottom: 50px;
+  background-color: #f8f8f8; }
+  .socialHolder h2 {
+    text-align: center;
+    color: #3071ac;
+    font-size: 26px;
+    padding: 100px 0 50px; }
+
+.fontTofinoUltra, .introText, .introText .author span, .videoContainer .centerText, .socialHolder h2, .firstScreen h1 span, .firstScreen h2, .timelineHolder .timelineList .timlineItem .timelineInfos h3, .timelineHolder .facts .factPrice, .cardHolder .circle-container li .cardTitle, .searchPopup input, .insideSearch .submitSearch, .insidePagesContent h1, .qaListing .qaItem .qaContent .qaTitle, .aboutIntro h2, .refugeeBenefits .refugeeSlider .refugeeInfos .refugeePrice, .refugeeBenefits .refugeeSlider .refugeeInfos .refugeeTitle, .quoteHolder .quote p, .quoteHolder .quote span.quoteIcon, .quoteHolder .quote .author {
   font-family: 'TofinoUltra'; }
 
 .fontTofinoRegular, .btn a, .header nav li a, .timelineHolder .timelineDate, .timelineHolder .timelineList .timlineItem .timelineInfos p, .cardHolder .leftTitle,
-.cardHolder .rightTitle, .cardHolder .circle-container li .cardInfos, .itemContainer .itemTitle, .itemContainer .itemBottom .itemLink a, .searchPopup .suggestion, .searchPopup .suggestion li a, .qaListing .qaItem .qaContent .qaDetails, .refugeeBenefits h2, .refugeeBenefits .refugeeSlider .refugeeInfos .refugeeDescription, .refugeeBenefits .aboutBottomContent {
+.cardHolder .rightTitle, .cardHolder .circle-container li .cardInfos, .itemContainer .itemTitle, .itemContainer .itemBottom .itemLink a, .searchPopup .suggestion, .searchPopup .suggestion li a, .qaListing .qaItem .qaContent .qaDetails, .refugeeBenefits h2, .refugeeBenefits .refugeeSlider .refugeeInfos .refugeeDescription, .refugeeBenefits .aboutBottomContent, .quoteHolder .quote .author span {
   font-family: 'TofinoRegular'; }
 
 .fontTofinoBlack {
@@ -118,7 +248,7 @@
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   /* ease-in-out */ }
 
-.transitionAll, .btn a, .btn a .linkAnim::after, .header nav li a, .header nav li a::before, .cardHolder .circle-container li .cardTitle, .cardHolder .circle-container li .cardInfos, .cardHolder .circle-container li::after, .cardHolder .circle-container li::before, .itemContainer .itemImage img, .itemContainer .itemBottom .itemLink a .linkAnim::after, .qaListing .qaItem .qaContent .shareQa a {
+.transitionAll, .videoContainer img, .btn a, .btn a .linkAnim::after, .header nav li a, .header nav li a::before, .cardHolder .circle-container li .cardTitle, .cardHolder .circle-container li .cardInfos, .cardHolder .circle-container li::after, .cardHolder .circle-container li::before, .itemContainer .itemImage img, .itemContainer .itemBottom .itemLink a .linkAnim::after, .qaListing .qaItem .qaContent .shareQa a {
   -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -328,7 +458,7 @@ body {
 .timelineHolder {
   position: relative;
   z-index: 12;
-  margin-top: -150px;
+  margin-top: -200px;
   background-image: url(../images/timeline-bg.png);
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -1223,3 +1353,32 @@ body {
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
     .moreNews a:hover {
       transform: scale(1.1); }
+
+.quoteHolder {
+  position: relative;
+  padding: 100px 0 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover; }
+  .quoteHolder .quote {
+    position: relative;
+    margin-bottom: 200px; }
+    .quoteHolder .quote p {
+      color: #fff;
+      font-size: 26px; }
+    .quoteHolder .quote span.quoteIcon {
+      font-size: 100px;
+      top: -40px;
+      left: -80px;
+      color: #fff;
+      position: absolute; }
+      .quoteHolder .quote span.quoteIcon.last {
+        top: inherit;
+        bottom: 20px;
+        left: inherit;
+        right: -20px; }
+    .quoteHolder .quote .author {
+      text-align: right;
+      margin-top: 80px;
+      color: #fff; }
