@@ -533,4 +533,11 @@
             font-size: 0.5em;
         }
     }
+    .skipIntro {
+        position: fixed;
+        z-index: 11111111;
+    }
+    .introText {
+        width: 75%;
+    }
 }

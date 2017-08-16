@@ -155,13 +155,15 @@
         }
         .smallText {
             font-size: 22px;
-            text-transform: none
+            text-transform: none;
+            line-height: 120%;
         }
         .halfText {
             margin-bottom: 20px;
             line-height: 130%;
             width: 45%;
             display: inline-block;
+            margin-right: 3%;
         }
     }
     

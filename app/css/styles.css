@@ -127,12 +127,14 @@
     margin-top: 20px; }
   .introText .smallText {
     font-size: 22px;
-    text-transform: none; }
+    text-transform: none;
+    line-height: 120%; }
   .introText .halfText {
     margin-bottom: 20px;
     line-height: 130%;
     width: 45%;
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 3%; }
 
 .skipIntro {
   position: absolute;
