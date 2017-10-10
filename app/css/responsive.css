@@ -1,0 +1,346 @@
+/* Laptop & Small Desktop */
+@media only screen and (min-width: 1026px) and (max-width: 1400px) {
+  .firstScreen h1 {
+    margin-top: 15px; }
+  .fullHeightSpace {
+    display: none; }
+  .aboutIntro {
+    position: relative;
+    padding-top: 0; }
+    .aboutIntro .introAboutScroll {
+      transform: translateY(0) translateX(0) !important;
+      position: relative;
+      top: inherit;
+      left: 0%;
+      height: auto;
+      overflow: inherit;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 50px; }
+      .aboutIntro .introAboutScroll .skrollable {
+        transform: translateY(0) translateX(0) !important; } }
+
+/* MOBILE & Tablets */
+@media only screen and (min-width: 100px) and (max-width: 1024px) {
+  #scene {
+    transform: matrix(1, 0, 0, 1, 0, 0) !important; }
+  .burgerMenu {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    top: 27px;
+    right: 20px; }
+    .burgerMenu span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #fff; }
+      .burgerMenu span:nth-child(2) {
+        top: 10px; }
+      .burgerMenu span:nth-child(3) {
+        top: 20px; }
+  .header nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: #fff;
+    top: 75px;
+    width: 100%;
+    text-align: center; }
+    .header nav li a {
+      color: #0F2C46;
+      padding: 20px; }
+  .search {
+    margin: 25px 55px 0 0;
+    float: right; }
+  .searchPopup {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0F2C46;
+    z-index: 111;
+    position: fixed; }
+    .searchPopup input {
+      font-size: 3em; }
+  #scene {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 3; }
+    #scene .layer img {
+      top: inherit;
+      bottom: 0; }
+  .exploreBtn,
+  .cardBtn {
+    display: none; }
+  .timelineHolder {
+    margin-top: 100px; }
+  .firstScreen {
+    position: relative;
+    padding-bottom: 100px; }
+    .firstScreen h1 {
+      z-index: 4;
+      position: relative; }
+  .timelineHolder {
+    text-align: center; }
+    .timelineHolder .timelineList .timlineItem .timelineInfos h3 {
+      font-size: 2em; }
+    .timelineHolder .facts {
+      padding-bottom: 60px; }
+      .timelineHolder .facts .factShape {
+        display: none; }
+      .timelineHolder .facts .factsTitle {
+        position: relative;
+        left: inherit;
+        display: block;
+        top: inherit;
+        transform: translateX(0%);
+        margin: 50px 0; }
+      .timelineHolder .facts .col-md-3 {
+        margin-bottom: 40px; }
+  .absoluteRight {
+    position: relative;
+    bottom: inherit;
+    right: inherit;
+    margin: 50px 0; }
+  .whiteSection .btn {
+    margin: 0 0 30px 0px; }
+  .cardHolder .circle-container {
+    width: 100%;
+    height: auto;
+    border: none; }
+    .cardHolder .circle-container .leftTitle,
+    .cardHolder .circle-container .rightTitle {
+      transform: translateX(0%);
+      position: relative;
+      left: 0;
+      text-align: left;
+      top: 0; }
+    .cardHolder .circle-container .cardTilt img {
+      width: 300px;
+      position: relative;
+      transform: translate(0) !important;
+      left: inherit; }
+    .cardHolder .circle-container .cardTitle {
+      font-size: 1em !important; }
+    .cardHolder .circle-container .cardInfos {
+      font-size: 0.8em !important;
+      max-width: 100%; }
+    .cardHolder .circle-container ul li {
+      left: 0%;
+      width: 100%;
+      position: relative;
+      float: none;
+      display: block;
+      margin: 20px 0; }
+      .cardHolder .circle-container ul li::before {
+        left: -1px !important;
+        right: inherit !important; }
+      .cardHolder .circle-container ul li:hover::before {
+        left: -6px !important; }
+    .cardHolder .circle-container ul.alignLeft li {
+      right: inherit;
+      left: 0;
+      padding-left: 40px;
+      padding-right: 0;
+      text-align: left; }
+      .cardHolder .circle-container ul.alignLeft li:hover::before {
+        left: -8px !important; }
+    .cardHolder .circle-container .deg30,
+    .cardHolder .circle-container .deg60,
+    .cardHolder .circle-container .deg90,
+    .cardHolder .circle-container .deg120,
+    .cardHolder .circle-container .deg150,
+    .cardHolder .circle-container .deg180,
+    .cardHolder .circle-container .deg210,
+    .cardHolder .circle-container .deg240,
+    .cardHolder .circle-container .deg270,
+    .cardHolder .circle-container .deg300,
+    .cardHolder .circle-container .deg330 {
+      transform: translateY(0px) translateX(0px); }
+  .refugeeBenefits .aboutBottomContent {
+    width: 100%; }
+  .refugeeBenefits .refugeeSlider {
+    height: 700px;
+    padding-bottom: 0; }
+    .refugeeBenefits .refugeeSlider::before, .refugeeBenefits .refugeeSlider::after {
+      display: none; }
+    .refugeeBenefits .refugeeSlider .sliderLeft,
+    .refugeeBenefits .refugeeSlider .sliderRight {
+      width: 100%;
+      float: none;
+      height: auto; }
+    .refugeeBenefits .refugeeSlider .refugeeInfos {
+      position: absolute;
+      top: 0;
+      transform: translateY(0);
+      width: 100%;
+      text-align: center;
+      padding: 0 100px; }
+  .pressListing .itemContainer .itemImage img {
+    height: 100%;
+    width: auto; } }
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .fullHeightSpace {
+    display: none; }
+  .aboutIntro {
+    position: relative;
+    padding-top: 0; }
+    .aboutIntro .introAboutScroll {
+      transform: translateY(0) translateX(0) !important;
+      position: relative;
+      top: inherit;
+      left: 0%;
+      height: auto;
+      overflow: inherit;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 50px; }
+      .aboutIntro .introAboutScroll .skrollable {
+        transform: translateY(0) translateX(0) !important; }
+  .header {
+    margin: 30px 0 70px; }
+  .firstScreen h1 {
+    margin-top: 0px; } }
+
+/* Mobile */
+@media only screen and (min-width: 100px) and (max-width: 760px) {
+  .introText {
+    font-size: 20px; }
+  .creditCard img {
+    width: 80%; }
+  .manBlue img {
+    width: 100%; }
+  #scene {
+    top: 40px; }
+  .header {
+    margin: 20px 0 50px; }
+    .header nav li {
+      display: block;
+      margin: 0; }
+  .firstScreen {
+    padding-bottom: 0; }
+    .firstScreen h1 span {
+      color: #3071AC;
+      font-size: 2em; }
+    .firstScreen h2 {
+      font-size: 1.8em; }
+    .firstScreen p {
+      width: 100%;
+      font-size: 0.8em; }
+  .timelineHolder .timelineList::after {
+    display: none; }
+  .timelineHolder .timelineList .timlineItem {
+    position: relative;
+    margin-bottom: 50px; }
+    .timelineHolder .timelineList .timlineItem .timelineInfos {
+      text-align: left !important;
+      float: none !important;
+      width: 100%;
+      padding: 200px 0 0 20px !important; }
+    .timelineHolder .timelineList .timlineItem .timelineImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 !important;
+      height: 190px;
+      overflow: hidden; }
+      .timelineHolder .timelineList .timlineItem .timelineImage img {
+        border-radius: none; }
+      .timelineHolder .timelineList .timlineItem .timelineImage::after, .timelineHolder .timelineList .timlineItem .timelineImage::before {
+        display: none; }
+  .btn a {
+    font-size: 0.6em;
+    padding: 25px 65px 25px 50px; }
+  .firstScreen {
+    height: auto !important; }
+  .videoContainer .videoPopup .fa-close {
+    top: -40px;
+    right: 0px; }
+  .contentWord .bigWord {
+    font-size: 24px; }
+  .contentWord p {
+    font-size: 18px; }
+  .quotePopup .quoteModal {
+    font-size: 14px; }
+  .footerHolder h3 {
+    margin-bottom: 25px; }
+  .blackPattern {
+    background-color: rgba(0, 0, 0, 0.9); }
+  .insidePagesContent h1 {
+    font-size: 3em;
+    line-height: 80px; }
+  .searchPopup input {
+    font-size: 2em; }
+  .searchPopup .suggestion li a {
+    font-size: 1em; }
+  .itemContainer .itemTitle {
+    font-size: 1.3em; }
+  .insideSearch .inputSearch {
+    padding-right: 90px;
+    font-size: 0.8em; }
+  .qaListing .qaItem .qaContent .qaTitle {
+    font-size: 1em; }
+  .aboutIntro {
+    padding-top: 0px;
+    position: relative; }
+    .aboutIntro h2 {
+      color: #3071AC;
+      font-size: 2em; }
+    .aboutIntro .introAboutScroll {
+      position: relative;
+      top: inherit;
+      font-size: 0.8em; }
+  .fullHeightSpace {
+    display: none; }
+  .refugeeBenefits .refugeeSlider .refugeeImage {
+    width: 300px;
+    height: 300px; }
+    .refugeeBenefits .refugeeSlider .refugeeImage::before {
+      width: 260px;
+      height: 260px; }
+  .refugeeBenefits .refugeeSlider .refugeeInfos {
+    padding: 0; }
+    .refugeeBenefits .refugeeSlider .refugeeInfos .refugeePrice {
+      font-size: 2em; }
+    .refugeeBenefits .refugeeSlider .refugeeInfos .refugeeTitle {
+      font-size: 1em; }
+    .refugeeBenefits .refugeeSlider .refugeeInfos::before {
+      display: none; }
+    .refugeeBenefits .refugeeSlider .refugeeInfos::after {
+      top: 35%; }
+  .refugeeBenefits .refugeeSlider {
+    height: 540px; }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 20%; }
+  .refugeeBenefits .refugeeSlider .swiper-slide.swiper-slide-active .refugeeInfos::after {
+    width: 100%; }
+  .insideSearch .submitSearch {
+    top: 13px; }
+  .newsListing .itemContainer {
+    height: 400px; }
+    .newsListing .itemContainer .itemImage img {
+      width: 100%;
+      height: auto; }
+  .topImage {
+    background-position: center bottom; }
+  .footerLogo img {
+    width: 90px; }
+  .footer .credit {
+    font-size: 0.5em; }
+  .skipIntro {
+    position: fixed;
+    z-index: 11111111; }
+  .introText {
+    width: 75%; } }
